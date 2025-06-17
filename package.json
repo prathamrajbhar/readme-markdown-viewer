@@ -1,0 +1,48 @@
+{
+  "name": "readme-markdown-viewer",
+  "displayName": "README Markdown Viewer",
+  "description": "Automatically renders README.md files as Markdown webviews",
+  "version": "1.0.0",
+  "publisher": "NodeNest",
+  "author": {
+    "name": "Pratham Rajbhar",
+    "email": "pratham.rajbhar987@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/prathamrajbhar/readme-markdown-viewer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prathamrajbhar/readme-markdown-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prathamrajbhar/readme-markdown-viewer/issues"
+  },
+  "keywords": ["readme", "markdown", "viewer", "preview", "webview"],
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onLanguage:markdown"],
+  "main": "./out/extension.js",
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.101.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
